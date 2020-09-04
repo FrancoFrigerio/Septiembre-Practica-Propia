@@ -61,6 +61,14 @@ public Producto(String titulo, Float precio, TipoProducto tipoProducto) {
 	this.tipoProducto = tipoProducto;
 }
 
+@Override
+public String toString() {
+	return "Producto [id=" + id + ", titulo=" + titulo + ", precio=" + precio + ", codigo=" + codigo + ", tipoProducto="
+			+ tipoProducto + "]";
+}
+
+
+
 public Long getId() {
 	return id;
 }

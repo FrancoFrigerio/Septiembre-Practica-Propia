@@ -1,5 +1,6 @@
 package ar.com.EducacionIT.service.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import ar.com.EducacionIT.app.Domain.Producto;
@@ -58,13 +59,15 @@ public class ProductoServiceImpl implements ProductoService{
 	//el repository es para poder acceder a un producto en la base de dato
 	@Override
 	public List<Producto> findAll() {
+		List<Producto> listado = new ArrayList<>();
+		
 		try {
 			this.porductoRepository.findProductos();
 		} catch (GenericExeption e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return null;
+		return listado;
 		
 	}
 
